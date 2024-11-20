@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:ufs_task/models/product_model.dart';
 
@@ -33,7 +34,7 @@ class ApiService {
       final response = await http.delete(url);
 
       if (response.statusCode == 200) {
-        print("Product deleted successfully");
+        stdout.write("Product deleted successfully");
       } else {
         throw Exception("Failed to delete product: ${response.statusCode}");
       }

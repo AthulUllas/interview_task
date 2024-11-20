@@ -55,7 +55,7 @@ class NewProduct extends StatelessWidget {
                     description: descriptionController.text,
                     price: double.parse(priceController.text),
                     image: imageController.text,
-                    category: Category.OTHER,
+                    category: Category.other,
                     rating: Rating(rate: 0.0, count: 1));
                 productController.createProduct(newProduct);
                 Get.back();
